@@ -104,7 +104,8 @@ abstract class AbstractItemNormalizer extends AbstractObjectNormalizer
         $context['api_normalize'] = true;
 
         if (isset($context['resources'])) {
-            $resource = $context['iri'] ?? $this->iriConverter->getIriFromItem($object);
+            // $resource = $context['iri'] ?? $this->iriConverter->getIriFromItem($object);
+            $resource = "nope"; // <= je n'ai toujours pas trouvé à quoi ce calcul sert dans notre situation
             $context['resources'][$resource] = $resource;
         }
 

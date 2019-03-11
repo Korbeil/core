@@ -115,6 +115,8 @@ final class IriConverter implements IriConverterInterface
      */
     public function getIriFromItem($item, int $referenceType = UrlGeneratorInterface::ABS_PATH): string
     {
+        return 'pouet';
+
         $resourceClass = $this->getObjectClass($item);
         $routeName = $this->routeNameResolver->getRouteName($resourceClass, OperationType::ITEM);
 
